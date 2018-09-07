@@ -3,14 +3,14 @@
 
 可参考余博伦大佬的教程：
 <a href="https://yubolun.com/fcc-random-quote-machine/">【FCC系列教程】随机名言获取器</a>
-
+<pre>
 知识点：
 1、html结构
-  body   //背景色变化
-    container  //固定背景色
-      blockquote  //字体颜色变化，及内容的获取
-      div.btn  //
-        button  //每个按钮 背景色变化  ，字体颜色白色固定
+  body   //背景色变化  
+    container  //固定背景色  
+      blockquote  //字体颜色变化，及内容的获取 
+      div.btn  // 
+        button  //每个按钮 背景色变化  ，字体颜色白色固定 
         button  //前2个按钮是分享按钮， 后一个是刷新（再次）获取名言
         button
   footer
@@ -27,4 +27,4 @@
   
 4、最终效果的预览
    <a href="https://caifu23.github.io/myFCC/fcc01/">随机名言生成器</a>
-  
+ </pre> 
