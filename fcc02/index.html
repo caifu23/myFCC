@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <title>当地天气</title>
+</head>
+<body>
+    <header class="container">
+        <h1>天气应用</h1>
+    </header>
+    <main class="container">
+        <section class="weather-today">
+            <p>今天天气  <span id="locationName"></span></p>
+            <p></p>
+            <ul id="weather-toData">
+                <li>湿度 : <span></span></li>
+                <li>温度 : <span></span></li>
+                <li>体感温度 : <span></span></li>
+                <li>天气情况 : <span></span></li>
+                <li>风速(km/h) : <span></span></li>
+                <!-- <li>穿衣指数 : <span></span></li>
+                <li>洗车指数 : <span></span></li>
+                <li>旅行指数 : <span></span></li>
+                <li>锻炼指数 : <span></span></li>
+                <li>紫外线指数 : <span></span></li> -->
+            </ul>
+        </section>
+        <section class="weather-sixDays">
+            <p>未来6天天气</p>
+            <div id="sixDays">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
