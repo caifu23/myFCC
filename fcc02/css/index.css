@@ -28,6 +28,11 @@ main section {
     border-top: 1px solid #eee;
     padding-left: 30%;
 }
+@media screen and (max-width: 640px) {
+    main section {
+        padding-left: 5%;
+    }
+}
 
 main .weather-today p {
     font-size: 18px;
