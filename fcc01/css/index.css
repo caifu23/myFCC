@@ -1,0 +1,96 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?t0hoja');
+    src: url('../fonts/icomoon.eot?t0hoja#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?t0hoja') format('truetype'), url('../fonts/icomoon.woff?t0hoja') format('woff'), url('../fonts/icomoon.svg?t0hoja#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* general */
+
+body {
+    background-color: paleturquoise;
+    transition: all .6s linear;
+}
+
+.contentBox {
+    box-sizing: content-box;
+    margin: 8% auto auto;
+    padding: 50px;
+    width: 450px;
+    background-color: antiquewhite;
+}
+
+.contentBox #leftQuotation {
+    margin-top: 22px;
+    font-size: 2em;
+}
+
+.contentBox blockquote {
+    font-size: 1.75em;
+    line-height: 1.2;
+    /* word-break: break-all; */
+}
+
+#leftQuotation, #quoteWords, quoteAuthor {
+    transition: all .6s linear;
+}
+
+/* btn */
+
+.icon-twitter:before {
+    content: "\e901";
+}
+
+.icon-facebook:before {
+    content: "\e902";
+}
+
+button#tweetBtn, button#tumblrBtn, button#newQuote {
+    color: #fff;
+    transition: all .6s linear;
+    /* background-color: blueviolet; */
+    /* border-color: transparent; */
+}
+
+button#tweetBtn:hover, button#tumblrBtn:hover, button#newQuote:hover {
+    opacity: .75;
+}
+
+button#tweetBtn:focus, button#tumblrBtn:focus, button#newQuote:focus {
+    /* margin-right: .2em; */
+    box-shadow: none;
+}
+
+.contentBox p {
+    margin-bottom: 1.5em;
+}
+
+button:not(:disabled):not(.disabled):active:focus {
+    box-shadow: none;
+}
+
+footer {
+    margin-top: .65em;
+    font-size: .95em;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
