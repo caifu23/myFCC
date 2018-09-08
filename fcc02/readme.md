@@ -8,4 +8,5 @@
             <a href="https://caifu23.github.io/myFCC/fcc02/index2.html">当地天气</a>
 5、待完善：
    样式及js代码的处理（冗余）
+   及手机端的样式
 </pre>

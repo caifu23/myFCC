@@ -59,10 +59,9 @@ $(function() {
             },
             success: function(res) {
                 $("#serCity").text(res.city + ' ');
-                $("#ser-result p span").eq(0).text('空气质量 : ' + res.data[0].date + ' ' + res.data[0].week);
-                $("#ser-result li").eq(0).text('穿衣指数 : ' + res.data[0].air + ' ' + res.data[0].air_level);
-                $("#ser-result li").eq(1).text('洗车指数 :' + res.data[0].index[3].level + ' ' + res.data[0].index[3].desc);
-                $("#ser-result li").eq(2).text('旅行指数 : ' + res.data[0].index[4].level + ' ' + res.data[0].index[4].desc);
+                $("#ser-result li").eq(0).text('空气质量 : ' + res.data[0].air + ' ' + res.data[0].air_level);
+                $("#ser-result li").eq(1).text('穿衣指数 :' + res.data[0].index[3].level + ' ' + res.data[0].index[3].desc);
+                $("#ser-result li").eq(2).text('洗车指数 : ' + res.data[0].index[4].level + ' ' + res.data[0].index[4].desc);
                 $("#ser-result li").eq(4).text('锻炼指数 : ' + res.data[0].index[1].desc);
                 $("#ser-result li").eq(5).text('紫外线指数 :' + res.data[0].index[0].level + ' ' + res.data[0].index[0].desc);
 
