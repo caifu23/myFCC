@@ -1,0 +1,130 @@
+/* Font */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?ey3e8i');
+    src:  url('../fonts/icomoon.eot?ey3e8i#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?ey3e8i') format('truetype'),
+      url('../fonts/icomoon.woff?ey3e8i') format('woff'),
+      url('../fonts/icomoon.svg?ey3e8i#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+  .icon-rainy2:before {
+    content: "\e91d";
+    color: rgb(114, 198, 231);
+  }
+  .icon-rainy3:before {
+    content: "\e91e";
+    color: rgb(165, 220, 241);
+  }
+  .icon-cloudy2:before {
+    content: "\e916";
+  }
+
+/* general  */
+body {
+    margin: 0;
+    color: #333333;
+}
+
+ul {
+    list-style: none;
+}
+.container {
+    margin: 3% auto auto;
+    width: 95%;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.clearfix {
+    zoom: 1;
+}
+
+/* header */
+header h1{
+    font-weight: normal;
+    text-align: center;
+    color: #6a6a6a;
+}
+
+
+/* main */
+main section {
+    border-top: 1px solid #eee;
+    padding: 1em 0;
+}
+main section p {
+    text-align: center;
+}
+#weather-local p span {
+    margin-left: 1em;
+    font-size: .8em;
+    color: #ccc;
+}
+
+
+
+#weather-local ul {
+    float: left;
+    margin: 0 5em;
+}
+
+#weather-local li {
+    font-size: .95em;
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+#weather-search input{
+    margin-right: .5em;
+    border-radius: 10px;
+    border: 1px solid rgb(119, 120, 121);
+    padding: 0 1em;
+    width: 10%;
+    height: 30px;
+}
+
+#weather-search input:active,
+#weather-search input:focus {
+    outline: none;
+}
+
+#weather-search button{
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 0 1em;
+    line-height: 30px;
+    color: rgb(119, 120, 121);
+    transition: all .6s linear;
+}
+#weather-search button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+#weather-search button:active,
+#weather-search button:focus {
+    outline: none;
+}

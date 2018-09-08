@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index2.css">
+    <title>天气预报</title>
+</head>
+<body>
+    <header class="container">
+        <h1><span id="localCity"></span>天气</h1>
+    </header>
+    <main class="container">
+        <section id="weather-local" class="clearfix">
+            <p>今天天气 <span></span></p>
+            <ul>
+                <li>空气质量 : </li>
+                <li>穿衣指数 : </li>
+                <li>洗车指数 :</li>
+                <li>旅行指数 : </li>
+                <li>锻炼指数 : </li>
+                <li>紫外线指数 : </li>
+            </ul>
+            <ul id="hours"></ul>
+        </section>
+        <section id="weather-sixDays">
+            <p>未来6天 天气</p>
+        </section>
+        <section id="weather-search">
+            <input type="text" placeholder="请输入查询的城市"><button type="button" id="ser">查询</button>
+            <p id="serCity"></p>
+            <ul id="ser-result">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li> </li>
+            </ul>
+        </section>
+    </main>
+
+
+    <!-- JQ -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/index2.js"></script>
+</body>
+</html>
