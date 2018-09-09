@@ -27,7 +27,7 @@ $(function() {
     //   获取input#query的值
     var q = $("#query").val();
     var queryUrl =
-      "http://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=" +
+      "https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&prop=pageimages|extracts&pilimit=max&exintro&explaintext&exsentences=1&exlimit=max&gsrsearch=" +
       q +
       "&callback=?";
     $.ajax({
