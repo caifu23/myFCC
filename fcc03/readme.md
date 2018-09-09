@@ -1,4 +1,5 @@
 <h1>维基百科搜索页</h1>
+<pre>
 1、练习来源： <a href="https://freecodecamp.cn/challenges/build-a-wikipedia-viewer">Build a Wikipedia Viewer</a>
 2、功能：
         在一个搜索框搜索维基百科的条目，并看到输出结果
@@ -20,5 +21,27 @@
    8. 页面类型  （<a href="https://www.mediawiki.org/wiki/API:Query#Page_types">Page_type</a>）
    9. https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&prop=pageimages|extracts&pilimit=max&exlimit=max&exintro&explaintext&exsentences=1&exsectionformat=wiki&gsrsearch=frontend
 
-5、最终预览效果：<a href="https://caifu23.github.io/myFCC/fcc03/">维基百科查询</a>
-   
+5、缓入查询条目的显示
+        /* 缓入查询条目的显示 */
+        .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        }
+
+        @keyframes fadeInUp {
+        0% {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0)
+        }
+        to {
+                opacity: 1;
+                transform: none
+        }
+        }
+
+        .fadeInUp {
+        animation-name: fadeInUp
+        }
+
+6、最终预览效果：<a href="https://caifu23.github.io/myFCC/fcc03/">维基百科查询</a>
+</pre>   
