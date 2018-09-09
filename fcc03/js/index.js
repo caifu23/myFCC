@@ -49,7 +49,7 @@ $(function() {
 
   // 返回的数据的结果 处理 显示
   function disResult(data) {
-    var pageurl = "http://en.wikipedia.org/?curid=";
+    var pageurl = "https://en.wikipedia.org/?curid=";
     for (var i in data) {
       $("#result").append(
         "<div class='resultdiv fadeInUp animated'><a target='_blank' href='" + pageurl + data[i].pageid + "'><h3>" + data[i].title + "</h3><p>" + data[i].extract +
