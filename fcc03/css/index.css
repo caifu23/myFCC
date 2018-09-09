@@ -1,0 +1,41 @@
+body {
+    background-color: #092b40;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+.container {
+    
+}
+
+.box {
+   margin-top: 10em;
+   line-height: 2;
+}
+
+.ser {
+    position: relative;
+}
+
+.box input {
+    border: 1px solid #ccc;
+    width: 150px;
+    transition: all .6s linear;
+}
+.ser button {
+    display: none;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    transform: translateX(-100%);
+}
+
+.box input:focus,
+.ser button:focus {
+    outline: none;
+    /* transform: scaleX(3); */
+}
+
