@@ -1,41 +1,86 @@
-body {
-    background-color: #092b40;
+/* Fonts */
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?k8eo6');
+    src: url('../fonts/icomoon.eot?k8eo6#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?k8eo6') format('truetype'), url('../fonts/icomoon.woff?k8eo6') format('woff'), url('../fonts/icomoon.svg?k8eo6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-a:hover{
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    /* speak: none; */
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-shuffle:before {
+    content: "\e902";
+}
+
+.icon-youtube_searched_for:before {
+    content: "\e900";
+}
+
+.icon-search:before {
+    content: "\e901";
+}
+
+body {
+    /* background-color: #092b40; */
+}
+
+a, a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
-
-.container {
-    
+#heading {
+    margin-top: 3rem;
+    padding-bottom: 1.5rem;
 }
 
-.box {
-   margin-top: 10em;
-   line-height: 2;
+#random {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
-.ser {
-    position: relative;
-}
+/* button */
 
-.box input {
-    border: 1px solid #ccc;
-    width: 150px;
+#search {
+    padding: .2rem .75rem;
+    font-size: 1.5rem;
+}
+#search span:first-child{
     transition: all .6s linear;
 }
-.ser button {
-    display: none;
-    position: absolute;
-    border: none;
-    background-color: transparent;
-    transform: translateX(-100%);
+
+
+#result {
+    padding: 1.5rem 0;
 }
 
-.box input:focus,
-.ser button:focus {
-    outline: none;
-    /* transform: scaleX(3); */
+.resultdiv {
+    background-color: rgba(250, 250, 250, 0.8);
+    border-radius: 5px;
+    border-left: 5px solid transparent;
+    margin: 25px auto;
+    padding: 15px 30px;
+
+    transition: all 10s linear;
 }
 
+.resultdiv:hover {
+    border-left-color: rebeccapurple;
+}
+
+.resultdiv a {
+    color: rgba(44, 41, 41, 0.9);
+}

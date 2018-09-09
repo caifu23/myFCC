@@ -12,23 +12,36 @@
     <title>维基百科</title>
 </head>
 
-<body>
-    <div class="container">
+<body class="bg-dark">
+    <div class="container-fluid">
 
-        <div class="row box">
-            <div class="col-md-4 offset-md-4  text-center">
-                <a href="https://en.wikipedia.org/wiki/Special:Random" class="text-white" target="_blank">Click here
-                    for a
-                    random article</a>
-                <div class="ser">
-                    <input type="text">
-                    <button>X</button>
+        <div class="row" id="heading">
+            <div class="col-md-4 offset-md-4 col-xs-4 offset-xs-4 text-center">
+                <!-- get a random article -->
+                <div id="random">
+                    <a href="https://en.wikipedia.org/wiki/Special:Random" class="text-white" target="_blank">Click
+                        here
+                        for a
+                        random article<span class="icon-arrow-shuffle"></span></a>
+                </div>
+                <!-- search input -->
+                <div class="input-group mb-3">
+                    <input type="text" id="query" class="form-control" placeholder="Search article" aria-label="Search article"
+                        aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button id="search" class="btn btn-outline-secondary" type="button"><span class="icon-search"></span></button>
+                    </div>
                 </div>
                 <p class="text-white">Click icon to search</p>
+
+
             </div>
         </div>
-        <div id="res"></div>
-
+    </div>
+    <!-- search result of wiki -->
+    <div class="container">
+        <div id="result">
+        </div>
     </div>
 
 

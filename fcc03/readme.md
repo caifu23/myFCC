@@ -7,6 +7,7 @@
         获得一个随机的维基百科条目：http://en.wikipedia.org/wiki/Special:Random
         这是你使用维基百科API的入口： http://www.mediawiki.org/wiki/API:Main_page
         使用这个 <a href="https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm">传送门</a> 来体验维基百科的API
+        可参考查询：https://www.mediawiki.org/wiki/API:Query#Page_types
 
 4、wiki api 端点（起始url） 模式：https://en.wikipedia.org/w/api.php
    1. action = query (允许您检索各种类型的数据)
@@ -18,4 +19,6 @@
    7. list参数         (<a href="https://www.mediawiki.org/wiki/API:Lists/All">Lists/</a>)
    8. 页面类型  （<a href="https://www.mediawiki.org/wiki/API:Query#Page_types">Page_type</a>）
    9. https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&prop=pageimages|extracts&pilimit=max&exlimit=max&exintro&explaintext&exsentences=1&exsectionformat=wiki&gsrsearch=frontend
+
+5、最终预览效果：<a href="">维基百科查询</a>
    
