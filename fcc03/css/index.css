@@ -58,10 +58,10 @@ a, a:link, a:visited, a:hover, a:active {
     padding: .2rem .75rem;
     font-size: 1.5rem;
 }
-#search span:first-child{
+
+#search span:first-child {
     transition: all .6s linear;
 }
-
 
 #result {
     padding: 1.5rem 0;
@@ -73,7 +73,6 @@ a, a:link, a:visited, a:hover, a:active {
     border-left: 5px solid transparent;
     margin: 25px auto;
     padding: 15px 30px;
-
     transition: all 10s linear;
 }
 
@@ -83,4 +82,26 @@ a, a:link, a:visited, a:hover, a:active {
 
 .resultdiv a {
     color: rgba(44, 41, 41, 0.9);
+}
+
+
+/* 缓入查询条目的显示 */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0)
+    }
+    to {
+        opacity: 1;
+        transform: none
+    }
+}
+
+.fadeInUp {
+    animation-name: fadeInUp
 }

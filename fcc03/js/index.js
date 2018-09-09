@@ -21,7 +21,7 @@ $(function() {
     }
   });
 
-  
+
   function searchWiki(q) {
 
     //   获取input#query的值
@@ -52,7 +52,7 @@ $(function() {
     var pageurl = "http://en.wikipedia.org/?curid=";
     for (var i in data) {
       $("#result").append(
-        "<div class='resultdiv'><a target='_blank' href='" + pageurl + data[i].pageid + "'><h3>" + data[i].title + "</h3><p>" + data[i].extract +
+        "<div class='resultdiv fadeInUp animated'><a target='_blank' href='" + pageurl + data[i].pageid + "'><h3>" + data[i].title + "</h3><p>" + data[i].extract +
           "</p></a></div>"
       );
     }
