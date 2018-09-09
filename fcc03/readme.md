@@ -20,5 +20,5 @@
    8. 页面类型  （<a href="https://www.mediawiki.org/wiki/API:Query#Page_types">Page_type</a>）
    9. https://en.wikipedia.org/w/api.php?format=json&action=query&generator=search&prop=pageimages|extracts&pilimit=max&exlimit=max&exintro&explaintext&exsentences=1&exsectionformat=wiki&gsrsearch=frontend
 
-5、最终预览效果：<a href="">维基百科查询</a>
+5、最终预览效果：<a href="https://caifu23.github.io/myFCC/fcc03/">维基百科查询</a>
    
