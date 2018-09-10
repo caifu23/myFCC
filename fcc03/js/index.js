@@ -39,6 +39,7 @@ $(function() {
         var data = result.query.pages;
         // console.log(JSON.stringify(data));
         disResult(data);
+
       },
       error: function(err) {
         console.log(err);
