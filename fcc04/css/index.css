@@ -26,6 +26,15 @@ a, a:link, a:visited, a:hover, a:active {
     line-height: 2;
     color: white;
 }
+@media screen and (max-width:640px) {
+    .boxTwitchtv {
+        width: 95%;
+    }
+    .boxTwitchtv h1 {
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+}
  #tvStatus {
     margin-bottom: 0;
     padding-left: 0;
