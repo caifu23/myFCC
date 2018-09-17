@@ -1,0 +1,71 @@
+/* general */
+body {
+    color: #343a40;
+    background-color: rgb(161, 220, 243);
+    background-image: url(../images/weatherBg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+
+
+
+/* weather-wrap  */
+.weather-wrap {
+    margin-top: 4%;
+}
+
+.weather-wrap h2 {
+    margin-bottom: .75em;
+    font-weight: normal;
+}
+
+#weather-content,
+#weather-profit {
+    border-radius: 10px;
+    border: 1px solid #eee;
+    padding: 30px 20px;
+    background-color: rgba(255, 255, 255, .4);
+}
+@media screen and (max-width: 768px) {
+    #weather-content,
+    #weather-profit {
+        margin: 10px 15px;
+    }
+}
+
+#weather-content .date {
+    margin-bottom: 20px;
+}
+
+
+#today-temp,
+#today-desc {
+    color: rgb(16, 179, 243);
+}
+
+#today-temp{
+    margin-right: .5em;
+    font-size: 2em;
+}
+
+#today-humidity {
+    margin-right: 15px;
+}
+
+#changeCity {
+    display: inline-block;
+    margin-left: 5em;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+}
+
+#weather-profit {
+    color: rgb(48, 46, 46);
+}
+#weather-profit span {
+    font-size: 14px;
+    color: #6c757d;
+}

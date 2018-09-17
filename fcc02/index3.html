@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index3.css">
+    <title>Local Weather</title>
+</head>
+<body>
+    <div class="container text-center weather-wrap">
+        <h2>Weather app</h2>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="row">
+                    
+                    <div id="weather-content" class="col-md-6">
+                        <div class="date">
+                                
+                        </div>
+                        <p class="weather-location"><span></span><input id="changeCity" class="form-control" type="text" placeholder="更换城市"></p>
+                        <div class="weather-temp">
+                            <span id="today-temp"></span>
+                            <span id="today-desc"></span>
+                        </div>
+                        <hr style="width: 75%;">
+                        <p class="weather-wind">湿度 温度：<span id="today-humidity"></span>风：<span id="today-wind"></span></p>
+                    </div>
+                    <div id="weather-profit" class="col-md-5 offset-md-1 text-left">
+                        <p>紫 外 线 ：<span></span></p>
+                        <p>穿衣建议：<span></span></p>
+                        <p>洗车指数：<span></span></p>
+                        <p>旅游指数：<span></span></p>
+                        <p>户外运动：<span></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/index3.js"></script>
+</body>
+</html>
