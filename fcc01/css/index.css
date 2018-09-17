@@ -46,6 +46,24 @@ body {
     /* word-break: break-all; */
 }
 
+@media screen and (max-width: 640px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .contentBox #leftQuotation {
+        font-size: .75em;
+    }
+    
+    .contentBox blockquote {
+        font-size: 1em;
+    }
+
+    .contentBox .btn {
+        font-size: .75rem;
+    }
+}
+
 #leftQuotation, #quoteWords, quoteAuthor {
     transition: all .6s linear;
 }
