@@ -5,6 +5,7 @@ $(function() {
         var locationArr = [];
         if(!navigator.geolocation) {
             console.log('您的浏览器不支持地理位置');
+            $('.weather').append('您的浏览器不支持地理位置');
             return ;
         }
 
@@ -18,6 +19,7 @@ $(function() {
 
         function error() {
             console.log('无法获取您的位置!');
+            $('.weather').append('无法获取您的位置');
         };
 
         navigator.geolocation.getCurrentPosition(success, error);
