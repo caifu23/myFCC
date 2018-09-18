@@ -15,7 +15,7 @@ $(function() {
         $.ajax({
             type: "GET",
             url: "https://fcc-weather-api.glitch.me/api/current",
-            data: "?lat="+ locationArr[0] + "&lon="+locationArr[1],
+            data: "?lat="+ Math.floor(locationArr[0]) + "&lon="+Math.floor(locationArr[1]),
             dataType: "JSON",
             success: function (response) {
                 alert(JSON.stringify(response));
