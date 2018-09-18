@@ -11,27 +11,32 @@ $(function() {
 
     function getWeather() {
         // getLocation();
-        var num = locationArr[0];
-        if(locationArr[0]) {
+        var num = Math.floor( locationArr[0] );
+        var numLon = Math.floor( locationArr[1] );
+        if( num && numLon ) {
             $('.weather').append('----0'+ num);
-            $('.weather').append('----1' + typeof num);
-            $('.weather').append('----2' + parseInt(num));        
-            $('.weather').append('-----3'+Math.floor(locationArr[0]));
+            $('.weather').append('----1'+ numLon);
+            getAjax(num, numLon);
+            
         }
         
-
-        // $.ajax({
-        //     type: "GET",
-        //     url: "https://fcc-weather-api.glitch.me/api/current",
-        //     data: "?lat="+ Math.floor(locationArr[0]) + "&lon="+Math.floor(locationArr[1]),
-        //     dataType: "JSON",
-        //     success: function (response) {
-        //         alert(JSON.stringify(response));
-        //     },
-        //     error: function (err) { 
-        //         console.log(err);
-        //      }
-        // });
+        
+        
+    }
+    // ajax获取天气数据
+    function getAjax(lat, lon) {
+        $.ajax({
+            type: "GET",
+            url: "https://fcc-weather-api.glitch.me/api/current",
+            data: "?lat="+ lat + "&lon=" + lon,
+            dataType: "JSON",
+            success: function (response) {
+                alert(JSON.stringify(response));
+            },
+            error: function (err) { 
+                console.log(err);
+            }
+        });    
     }
 
     //获取位置
