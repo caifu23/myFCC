@@ -14,18 +14,18 @@ $(function() {
         $('.weather').append('----2' + parseInt(num));        
         $('.weather').append('-----3'+Math.floor(locationArr[0]));
 
-        $.ajax({
-            type: "GET",
-            url: "https://fcc-weather-api.glitch.me/api/current",
-            data: "?lat="+ Math.floor(locationArr[0]) + "&lon="+Math.floor(locationArr[1]),
-            dataType: "JSON",
-            success: function (response) {
-                alert(JSON.stringify(response));
-            },
-            error: function (err) { 
-                console.log(err);
-             }
-        });
+        // $.ajax({
+        //     type: "GET",
+        //     url: "https://fcc-weather-api.glitch.me/api/current",
+        //     data: "?lat="+ Math.floor(locationArr[0]) + "&lon="+Math.floor(locationArr[1]),
+        //     dataType: "JSON",
+        //     success: function (response) {
+        //         alert(JSON.stringify(response));
+        //     },
+        //     error: function (err) { 
+        //         console.log(err);
+        //      }
+        // });
     }
 
     //获取位置
