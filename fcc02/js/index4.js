@@ -11,8 +11,8 @@ $(function() {
 
     function getWeather() {
         // getLocation();
-        var num = Math.floor( locationArr[0] );
-        var numLon = Math.floor( locationArr[1] );
+        var num = locationArr[0];
+        var numLon = locationArr[1];
         if( num && numLon ) {
             $('.weather').append('----0'+ num);
             $('.weather').append('----1'+ numLon);
@@ -28,7 +28,7 @@ $(function() {
         $.ajax({
             type: "GET",
             url: "https://fcc-weather-api.glitch.me/api/current",
-            data: "?lat="+ lat + "&lon=" + lon,
+            data: "lat="+ lat + "&lon=" + lon,
             dataType: "JSON",
             success: function (response) {
                 alert(JSON.stringify(response));
