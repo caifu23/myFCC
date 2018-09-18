@@ -15,7 +15,7 @@ $(function() {
             var longitude = position.coords.longitude;
             locationArr.push(latitude, longitude);
             console.log(locationArr);
-            $('.weather').append(locationArr[0] + ' ' +locationArr[1]);
+            // $('.weather').append(locationArr[0] + ' ' +locationArr[1]);
         };
 
         function error() {
@@ -24,8 +24,9 @@ $(function() {
         };
 
         navigator.geolocation.getCurrentPosition(success, error);
-        
+        return locationArr;
     }
+    alert(locationArr[0]);
 
 
 
