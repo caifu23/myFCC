@@ -1,11 +1,30 @@
 $(function() {
     var locationArr = [];
-    $('#wea').on('click', getLocation);
+    $('#wea').on('click', getWeather);
     $('#wea').on('click', function() {
         console.log(locationArr[0]);
-        $('.weather').append(locationArr[0]);
+        // $('.weather').append(locationArr[0]);
     });
     
+
+    function getWeather() {
+        getLocation();
+        $('.weather').append(locationArr[0]);
+        $('.weather').append(Math.floor(locationArr[0]));
+
+        $.ajax({
+            type: "GET",
+            url: "https://fcc-weather-api.glitch.me/api/current",
+            data: "?lat="+ locationArr[0] + "&lon="+locationArr[1],
+            dataType: "JSON",
+            success: function (response) {
+                alert(JSON.stringify(response));
+            },
+            error: function (err) { 
+                console.log(err);
+             }
+        });
+    }
 
     //获取位置
     function getLocation() {
