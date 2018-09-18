@@ -1,5 +1,6 @@
 $(function() {
     $('#wea').on('click', getLocation);
+
     //获取位置
     function getLocation() {
         var locationArr = [];
@@ -14,7 +15,7 @@ $(function() {
             var longitude = position.coords.longitude;
             locationArr.push(latitude, longitude);
             console.log(locationArr);
-            $('.weather').append(locationArr[0] + locationArr[1]);
+            $('.weather').append(locationArr[0] + ' ' +locationArr[1]);
         };
 
         function error() {

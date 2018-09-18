@@ -10,42 +10,9 @@
     <div class="wrap">
         <p>Weather app</p>
         <div class="weather">
-            <button id="wea">click to location</button>
+            <button id="wea">click to location</button><br/>
         </div>
-        <p><button onclick="geoFindMe()">Show my location</button></p>
-        <div id="out">eee</div>
     </div>
-
-    <!-- <script>
-    function geoFindMe() {
-  var output = document.getElementById("out");
-
-  if (!navigator.geolocation){
-    output.innerHTML = "<p>您的浏览器不支持地理位置</p>";
-    return;
-  }
-
-  function success(position) {
-    var latitude  = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-    var img = new Image();
-    img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-
-    output.appendChild(img);
-  };
-
-  function error() {
-    output.innerHTML = "无法获取您的位置";
-  };
-
-  output.innerHTML = "<p>Locating…</p>";
-
-  navigator.geolocation.getCurrentPosition(success, error);
-}
-    </script> -->
 
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
