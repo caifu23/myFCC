@@ -3,18 +3,36 @@ var lat, lon;
 var tempUnit = 'C';
 var currentTempInCelsius;
 
-$(document).ready(function () {
-  if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        lat = "lat=" + position.coords.latitude;
-        lon = "lon=" + position.coords.longitude;
-        getWeather(lat, lon);
-      });
-  } else {
-      console.log('当前浏览器不支持 geolocation !');
-  } 
+$(document).ready(function () { 
+    $('.weather').append('加载中...');
+    //获取当前位置
+    getLocation();
+
+  
 
 });
+
+//获取当前位置的 经纬度
+function getLocation() {
+    if(!navigator.geolocation) {
+        console.log('当前浏览器不支持 geolocation!');
+        return ;
+    }
+
+    function success(position) {
+        lat = 'lat=' + position.coords.latitude;
+        lon = 'lon=' + position.coords.longitude;
+        //调用天气api，传入参数 经纬度
+        getWeather(lat, lon);
+    }
+
+    function error() {
+        console.log('无法获取位置！');
+    }
+
+    navigator.geolocation.getCurrentPosition(success, error);
+}
+
 
 function getWeather(lat, lon) {
     var urlString = api + lat + "&" + lon;
