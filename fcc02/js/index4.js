@@ -1,5 +1,6 @@
 $(function() {
     var locationArr = [];
+    setTimeout(getWeather, 3000);
     $('#wea').on('click', getWeather);
     $('#wea').on('click', function() {
         console.log(locationArr[0]);
