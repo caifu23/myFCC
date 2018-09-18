@@ -9,8 +9,10 @@ $(function() {
 
     function getWeather() {
         getLocation();
-        $('.weather').append(locationArr[0]);
-        $('.weather').append(Math.floor(locationArr[0]));
+        var num = locationArr[0];
+        $('.weather').append('----1' + typeof num);
+        $('.weather').append('----2' + parseInt(num));        
+        $('.weather').append('-----3'+Math.floor(locationArr[0]));
 
         $.ajax({
             type: "GET",
