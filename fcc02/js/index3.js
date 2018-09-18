@@ -23,7 +23,7 @@ $(function() {
     function getWeather(cityName) {
         $.ajax({
             type: "GET",
-            url: "http://v.juhe.cn/weather/index",
+            url: "https://v.juhe.cn/weather/index",
             data: "cityname="+ cityName +"&dtype=json&format=1&key=0912dacbdaa27981fe2523253a24bdb3",
             // data: {cityname: '广州', key: '0912dacbdaa27981fe2523253a24bdb3'},
             dataType: "jsonp",
