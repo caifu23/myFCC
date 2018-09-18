@@ -10,7 +10,7 @@ $(function() {
     function getWeather() {
         getLocation();
         var num = locationArr[0];
-        while(locationArr[0]) {
+        if(locationArr[0]) {
             $('.weather').append('----0'+ num);
             $('.weather').append('----1' + typeof num);
             $('.weather').append('----2' + parseInt(num));        
