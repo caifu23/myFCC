@@ -1,5 +1,6 @@
 $(function() {
     var locationArr = [];
+    setTimeout(getLocation, 1000);
     setTimeout(getWeather, 3000);
     $('#wea').on('click', getWeather);
     $('#wea').on('click', function() {
@@ -9,7 +10,7 @@ $(function() {
     
 
     function getWeather() {
-        getLocation();
+        // getLocation();
         var num = locationArr[0];
         if(locationArr[0]) {
             $('.weather').append('----0'+ num);
