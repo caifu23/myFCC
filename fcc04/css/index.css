@@ -48,7 +48,7 @@ a, a:link, a:visited, a:hover, a:active {
     background-color: #e1e1e6;
 }
 .boxTwitchtv li a {
-    display: hidden;
+    /* display: hidden; */
     font-size: .75em;
     font-weight: bolder;
     color: #5c5457;
@@ -66,6 +66,7 @@ a, a:link, a:visited, a:hover, a:active {
     transform: translateX(70%);
     transition: all .6s linear;
 }
+#tvStatus .active,
 #tvStatus li:hover {
     transform: translateX(0);
 }

@@ -20,56 +20,44 @@ $(function() {
             }else {
                 arr[v] = 'inline';
             }
+
+            //获取详细信息
+            $.getJSON(channelApi + v + "?callback=?",function(data){
+                console.log(arr[v]  + '-------' + v);
+                if(arr[v] == 'inline') {
+                    $('#tvList').prepend(" <li class='row "+ arr[v] +"'><div class='col-md-2' ><img src='" + data.logo +  "'/></div><div class='col-md-4' ><a href='"  + data.url +  "' target='_blank'>"+ data.display_name +"</a></div><div class='col-md-6'>" + data.display_name + " " + (data.status==null ? '' : data.status) + "</div></li>");
+    
+                }else {
+                    $('#tvList').append(" <li class='row "+ arr[v] +"'><div class='col-md-2' ><img src='" + data.logo +  "'/></div><div class='col-md-4' ><a href='"  + data.url +  "' target='_blank'>"+ data.display_name +"</a></div><div class='col-md-6'>" + "offline" + "</div></li>");
+                }
+            }); 
+
+
         });
+        
         
      
 
     }
 
 
-    var flag = true;
-    console.log(arr);
-    for(var key in arr) {
-        console.log(arr[key] + '==')
-        if(arr[key] == 'undefined'){
-            flag = false;
+
+    $('.tvSelector').on('click', function () {
+        // 移除li的active类名
+        $('.tvSelector').parent().removeClass('active');
+        // 给当前点击的li添加active类名
+        $(this).parent().addClass('active');
+        
+        var status = $(this).attr('id');
+        if(status === 'tvStatusAll') {  // all 被点击时
+            $('.offline, .inline').show();
+        } else if(status === 'tvOnline') {    //tvOnline 被点击时
+            $('.offline').hide();
+            $('.inline').show();
+        } else if(status === 'tvOffline'){  //tvOffline 被点击时
+            $('.inline').hide();
+            $('.offline').show();
         }
-    }
-    if(flag) {
-        tvChannels.forEach(function(v) {
-          // 节目的相关信息
-        $.getJSON(channelApi + v + "?callback=?",function(data){
-            console.log(arr[v]  + '-------' + v);
-            if(arr[v] == 'inline') {
-                $('#tvList').prepend(" <li class='row "+ arr[v] +"'><div class='col-md-2' ><img src='" + data.logo +  "'/></div><div class='col-md-4' ><a href='"  + data.url +  "' target='_blank'>"+ data.display_name +"</a></div><div class='col-md-6'>" + data.display_name + " " + (data.status==null ? '' : data.status) + "</div></li>");
-
-            }else {
-                $('#tvList').append(" <li class='row "+ arr[v] +"'><div class='col-md-2' ><img src='" + data.logo +  "'/></div><div class='col-md-4' ><a href='"  + data.url +  "' target='_blank'>"+ data.display_name +"</a></div><div class='col-md-6'>" + "offline" + "</div></li>");
-            }
-        });  
-            
-        });  
-    }
-
-    
-
-
-    // all 被点击时
-    $('#tvStatusAll').on('click', function() {
-        $('.offline').css('display','flex');
-        $('.inline').css('display','flex');
-    });
-
-    //tvOnline 被点击时
-    $('#tvOnline').on('click', function() {
-        $('.offline').css('display','none');
-        $('.inline').css('display','flex');
-    });
-
-    //tvOffline 被点击时
-    $('#tvOffline').on('click', function() {
-        $('.inline').css('display','none');
-        $('.offline').css('display','flex');
     });
 
 });
